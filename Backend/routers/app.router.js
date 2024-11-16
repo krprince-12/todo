@@ -1,7 +1,7 @@
 const express = require("express");
 const Todos = require("../controllers/app.controller.js");
 
-const router = express.Router(); // Correct usage of express.Router()
+const router = express.Router(); 
 
 // Define routes
 router.route('/post').post(Todos.todos);
@@ -11,4 +11,4 @@ router.route('/updateTodos/:id').put(Todos.updateTodos);
 router.route("/toggleCheck/:id").put(Todos.toggleTodoCheck);
 router.route("/getSortedTodos").get(Todos.getSortedTodos);
 
-module.exports = router; // Export the router correctly
+module.exports = router; 
