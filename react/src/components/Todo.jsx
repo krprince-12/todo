@@ -14,7 +14,7 @@ const Todos = () => {
     description: "",
     dueDate: "",
   });
-  // const { storeTokenInLs } = useAuth();
+
   const handleInputChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -39,7 +39,7 @@ const Todos = () => {
       const data = await response.json();
       console.log(data);
       if (response.ok) {
-        // storeTokenInLs(data.token);
+        
         setTask({
           title: "",
           description: "",
@@ -102,7 +102,7 @@ const Todos = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Update local state to reflect the change
+        
         setServices((prevServices) =>
           prevServices.map((task) =>
             task.id === id ? { ...task, isChecked: !task.isChecked } : task
